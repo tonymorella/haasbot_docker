@@ -1,0 +1,17 @@
+version: '2'
+services:
+  haasbot:
+    build:
+      context: .
+#      args:
+#        user: haasbot
+    container_name: haasbot
+#    stdin_open: true
+#    tty: true
+    ports:
+      - "8090:8090"
+      - "8092:8092"
+      - "2222:22"
+    volumes:
+      - "/home/haasbot/HTS:/root/HTS"
+#      - "/etc/localtime:/etc/localtime:ro"
